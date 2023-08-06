@@ -1,3 +1,3 @@
-# basic_backdoor
-set as your ip and port
-sadece komutlari gosteren bir ust dizine bele cixmiyan backdoor
+orta seviye backdoor
+dizinler arasinda kecid etmek olur, hedeften file upload,download etmek olur
+terminal ile baglanti qurulur
