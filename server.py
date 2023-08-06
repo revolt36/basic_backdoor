@@ -24,11 +24,11 @@ def upload_file(file_name):
 def download_file(file_name):
 	f = open(file_name, 'wb')#alinan verini basqa bir dosyaya yazmaq ucun wb ile aciriq
 	target.settimeout(1)#1 saniye icinde veri alinmazsa dongu biter socket timout xetasi verer
-	chunk = target.recv(4096)#soketten 4096 baytliq veri parcasi alir acilan dosyanin bir bolumu
+	chunk = target.recv(1024)#soketten 4096 baytliq veri parcasi alir acilan dosyanin bir bolumu
 	while chunk:
 		f.write(chunk)#alinan verini chunk dosyasina yaziriq
 		try:
-			chunk = target.recv(4096)
+			chunk = target.recv(1024)
 		except socket.timeout as e:#socket timout xetasi alarsa dongu durmasi ucun
 			break
 	target.settimeout(None)#target soketinin timeoutunu bagliyar ve diger soketler normal isleyer
